@@ -11,8 +11,16 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * The type Secure url reader.
+ */
 public class SecureURLReader {
 
+    /**
+     * Enable secure connection with other servers.
+     *
+     * @throws Exception the exception
+     */
     public static void enableConnection() throws Exception {
         File trustStoreFile = new File("keystore/myTrustStore");
         char[] trustStorePassword = "654321".toCharArray();
@@ -26,6 +34,13 @@ public class SecureURLReader {
         javax.net.ssl.HttpsURLConnection.setDefaultHostnameVerifier((hostname, sslSession) -> true);
     }
 
+    /**
+     * Read url string and execute requests .
+     *
+     * @param url the url of the endpoint of request
+     * @return the string response of the other server
+     * @throws IOException the io exception
+     */
     public static String readURL(String url) throws IOException {
         URL siteURL = new URL(url);
         StringBuilder result = new StringBuilder();

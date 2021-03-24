@@ -8,10 +8,21 @@ import static spark.Spark.*;
 import com.google.gson.Gson;
 import org.apache.commons.codec.digest.DigestUtils;
 
+/**
+ * The type Login service server.
+ */
 public class LoginService {
 
+    /**
+     * The Users of the secure app.
+     */
     static Map<String, String> users = new HashMap<>();
 
+    /**
+     * Main method that starts the login service server.
+     *
+     * @param args the args of the main method
+     */
     public static void main(String[] args){
 
         users.put("angi", DigestUtils.md5Hex("angi123"));
@@ -68,6 +79,11 @@ public class LoginService {
 
     }
 
+    /**
+     * Gets port of the server.
+     *
+     * @return the port of the server
+     */
     static int getPort() {
         if (System.getenv("PORT") != null) {
             return Integer.parseInt(System.getenv("PORT"));
