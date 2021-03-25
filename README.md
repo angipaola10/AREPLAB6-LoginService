@@ -18,7 +18,24 @@ This project is a part of [Laboratoy 6](https://github.com/angipaola10/AREP-LAB6
     **NOTE** : *Some endpoints offers by this project depend of [other service project ](https://github.com/angipaola10/AREPLAB6-OtherService.git), for this reason you must run the two projects at the time.*
 
 ## Documentation
-This project includess a [paper](https://github.com/angipaola10/AREP-LAB6/blob/master/Document.pdf) that describes the proccess performed to make the project. But if you need aditional iformation in the directory [docs](/docs) you find the documentation of site. 
+This project includess a [paper](https://github.com/angipaola10/AREP-LAB6/blob/master/Document.pdf) that describes the proccess performed to make the project. But if you need aditional iformation in the directory [docs](/docs) you find the documentation of site.
+
+### Instructions 
+If you want generate the documentation of this program, you must follow the next steps:
+1. Run the next command to create the documenation:
+
+       mvn javadoc:javadoc
+       
+2. Now, if you want, you can generate a site to see the documentation. Use the next command: 
+
+       mvn site
+       
+3. To see the site created, you must run the next command:
+
+       mvn site:run
+       
+    Enter http://localhost:8080 in your browser to see the site with the documentation.
+
 
 ## Author
 * Angi Paola Jiménez Pira - Student at the *Colombian School of Engineering Julio Garavito.*
